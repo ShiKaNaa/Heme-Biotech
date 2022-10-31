@@ -48,9 +48,10 @@ public class AnalyticsCounter {
 		}
 	}
 	
-	// Method that will count each occurrence of a symptom
-	// It will check if a symptom is already in the HashMap as a key
-	// If true it will add 1 to the counter, else it will create the key and initialize it at 1
+	/** Method that will count each occurrence of a symptom
+	 * It will check if a symptom is already in the HashMap as a key
+	 * If true it will add 1 to the counter, else it will create the key and initialize it at 1
+	 */
 	public static void countingSymptoms(HashMap<String, Integer> symptomeFrequencyMap, List<String> listOfSymptoms) {
 		
 		// Iterate over the list of symptoms
@@ -65,7 +66,12 @@ public class AnalyticsCounter {
 		System.out.println("FrequencyMap " + symptomeFrequencyMap);
 	}
 	
-	// This method will write the document 
+	/** This method will write the document with each symptoms and number of occurrences 
+	 * 
+	 * @param resultsDocument
+	 * @param symptomeFrequencyMap(HashMap String - Integer)
+	 * @throws IOException
+	 */
 	public static void writingFile(FileWriter resultsDocument, HashMap<String, Integer> symptomeFrequencyMap) throws IOException{
 		for(String symptom : symptomeFrequencyMap.keySet()) {
 			try {
