@@ -9,6 +9,7 @@ import java.util.List;
 /**
  * It will read the data from a file
  * and return a List<String>
+ * @author Raphaël
  */
 public class ReadSymptomDataFromFile implements ISymptomReader {
 
