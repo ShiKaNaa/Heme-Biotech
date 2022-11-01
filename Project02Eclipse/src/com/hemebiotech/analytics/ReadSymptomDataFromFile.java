@@ -7,41 +7,38 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Simple brute force implementation
- *
+ * It will read the data from a file
+ * and return a List<String>
  */
 public class ReadSymptomDataFromFile implements ISymptomReader {
 
-	private String filepath;
+	private List<String> listOfSymptoms = new ArrayList<String>();
 	
 	/**
-	 * 
-	 * @param filepath a full or partial path to file with symptom strings in it, one per line
+	 * This method will read each line of a document given its path
+	 * @param String
+	 * @return List<String>
+	 * @throws IOException
 	 */
-	public ReadSymptomDataFromFile (String filepath) {
-		this.filepath = filepath;
-	}
-	
 	@Override
-	public List<String> GetSymptoms() {
-		ArrayList<String> result = new ArrayList<String>();
-		
-		if (filepath != null) {
+	public List<String> listOfSymptoms(String documentToParse) throws IOException{
+
+		if(documentToParse != null) {
 			try {
-				BufferedReader reader = new BufferedReader (new FileReader(filepath));
-				String line = reader.readLine();
 				
-				while (line != null) {
-					result.add(line);
-					line = reader.readLine();
+				BufferedReader parsedFile = new BufferedReader (new FileReader(documentToParse));
+				String symptom = parsedFile.readLine();
+				
+				while (symptom != null) {
+					listOfSymptoms.add(symptom);
+					symptom = parsedFile.readLine();
 				}
-				reader.close();
+				parsedFile.close();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		}
-		
-		return result;
+		return listOfSymptoms;
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.hemebiotech.analytics;
+/**package com.hemebiotech.analytics;
 
 public class SymptomReaderController {
 	
@@ -7,7 +7,7 @@ public class SymptomReaderController {
 	public static void main (String args[]) {
 		
 		try {
-			symptorInterface.GetSymptoms().toString();
+			symptorInterface.getSymptoms().toString();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -16,3 +16,4 @@ public class SymptomReaderController {
 	}
 }
 
+*/
