@@ -20,11 +20,11 @@ public class AnalyticsCounter implements IAnalyticsCounter {
 	
 	public static void main(String args[]) throws Exception {
 		
-		resultsDocument = new FileWriter("result.out");
+		// resultsDocument = new FileWriter("result.out");
 		
 		// parsingFile(documentToParse, listOfSymptoms);
-		countingSymptoms(symptomeFrequencyMap, listOfSymptoms);
-		writingFile(resultsDocument, symptomeFrequencyMap);
+		// countingSymptoms(symptomeFrequencyMap, listOfSymptoms);
+		// writingFile(resultsDocument, symptomeFrequencyMap);
 		
 	}
 
@@ -69,12 +69,14 @@ public class AnalyticsCounter implements IAnalyticsCounter {
 		return symptomeFrequencyMap;
 	}
 	
+
 	/** This method will write the document with each symptoms and number of occurrences 
 	 * 
 	 * @param resultsDocument
 	 * @param symptomeFrequencyMap(HashMap String - Integer)
 	 * @throws IOException
 	 */
+	/*
 	public static void writingFile(FileWriter resultsDocument, TreeMap<String, Integer> symptomeFrequencyMap) throws IOException{
 		for(String symptom : symptomeFrequencyMap.keySet()) {
 			try {
@@ -85,5 +87,5 @@ public class AnalyticsCounter implements IAnalyticsCounter {
 		}
 		resultsDocument.close();
 	}
-	
+	*/
 }

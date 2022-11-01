@@ -19,6 +19,7 @@ public class AnalyticsInitializer {
 		TreeMap<String, Integer> symptomsOrdered = symptomsCount.countingSymptoms(listOfSymptomsToAnalyze);
 		System.out.println(symptomsOrdered);
 		
-		
+		IDocumentWriter fileWriter = new DocumentWriter();
+		fileWriter.writingFile(symptomsOrdered);
 	}
 }
