@@ -13,7 +13,7 @@ import java.util.TreeMap;
  */
 public class DocumentWriter implements IDocumentWriter {
 	
-
+	
 	public void writingFile(TreeMap<String, Integer> symptomeFrequencyMap) throws IOException{
 		
 		FileWriter resultsDocument = new FileWriter("result.out");

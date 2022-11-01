@@ -1,6 +1,5 @@
 package com.hemebiotech.analytics;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.List;
 import java.util.TreeMap;
@@ -21,5 +20,6 @@ public class AnalyticsInitializer {
 		
 		IDocumentWriter fileWriter = new DocumentWriter();
 		fileWriter.writingFile(symptomsOrdered);
+		
 	}
 }
