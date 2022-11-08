@@ -4,9 +4,9 @@ import java.util.List;
 import java.util.TreeMap;
 
 /**
- * 
+ * Class with one method that will count and order the data from a List of String
  * @author Raphaël
- *
+ * 
  */
 
 public class AnalyticsCounter implements IAnalyticsCounter {
