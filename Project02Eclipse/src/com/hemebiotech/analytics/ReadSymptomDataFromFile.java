@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * It will read the data from a file
- * and return a List<String>
+ * It will read the data from a file (.txt)
+ * and return a List<String> from said file
  */
 public class ReadSymptomDataFromFile implements ISymptomReader {
 
@@ -16,12 +16,11 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 	
 	/**
 	 * This method will read each line of a document given its path
-	 * @param String
-	 * @return List<String>
-	 * @throws IOException
+	 * @param documentToParseLocation which is the relative path of the document
+	 * @return A List<String> of all symptoms inside file
 	 */
 	@Override
-	public List<String> listOfSymptoms(String documentToParse) throws IOException{
+	public List<String> listOfSymptoms(String documentToParse) {
 
 		if(documentToParse != null) {
 			try {
